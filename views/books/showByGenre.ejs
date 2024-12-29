@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<% if (genre === 'fantasy') { %>
+    <%- include('./fantasy') %>
+<% } else if (genre === 'sci-fi') { %>
+    <%- include('./sci-fi') %>
+<% } else if (genre === 'non-fiction') { %>
+    <%- include('./non-fiction') %>
+<% } else if (genre === 'horror') { %>
+    <%- include('./horror') %>
+<% } else if (genre === 'action') { %>
+    <%- include('./action') %> 
+<% } %>

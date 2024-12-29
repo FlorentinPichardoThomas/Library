@@ -1,0 +1,42 @@
+<%- include('../partials/header') %>
+<div><a link href="/books" class="Go">Go Back</a></div>
+<div class="gogo">
+<div id="2"><a><%= book.name %></a></div>
+<div>Author:<%= book.userName %></div>
+    <td><img src="/images/books/<%=book.coverImage%>"></td>
+<div>Price:$<%= book.price %></div>
+<div>ISBN:<%= book.ISBN %></div>
+<div>Published:<%= book.year %></div>
+<div>Genre:<%= book.genre.charAt(0).toUpperCase() + book.genre.slice(1) %></div>
+<div>Description: <%= book.description %></div>
+<button><a href="/books/sorry" style="text-decoration: none;">Buy</a></button>
+<% if (book.user.toString() === currentUser._id.toString()) { %>
+    <button><a href="/books/edit/<%= book._id %>" style="text-decoration: none;">Edit Book</a></button>
+<button><a href="/books/deletePage/<%= book._id %>" style="text-decoration: none;">Delete Book</a></button>
+<% } %>
+<h2>Comments:</h2>
+<ul>
+    <!-- Display existing comments -->
+<ul>
+    <% book.comments.forEach(function(comment){ %>
+        <li>
+            <strong><%= comment.userName %></strong>
+            (<%= comment.createdAt ? comment.createdAt.toDateString() : 'Recent' %>):
+            <br>
+            <%= comment.comment %>
+
+            
+        </li>
+    <% }) %>
+</ul>
+
+<!-- Form for adding new comments -->
+<form action="/books/<%= book._id %>/comments" method="post">
+    <label for="comment">Add a Comment:</label>
+    <textarea id="comment" name="comments"></textarea>
+    <button type="submit">Submit</button>
+</form>
+
+
+
+<%- include('../partials/footer') %>
