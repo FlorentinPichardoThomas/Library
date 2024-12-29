@@ -1,0 +1,121 @@
+div.Zamazon{
+    text-align: center;
+    align-items: center;
+}
+
+.menu-button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.menu-content{
+    display: none;
+}
+
+.menu-item{
+    padding: 10px;
+    text-align: center;
+    background-color: rgba(165, 42, 42, 0.5); /* Brown with 50% transparency */
+    color: white;
+}
+
+div#2{
+    display: flex;
+     flex-direction: column; 
+     align-items: center; 
+     justify-content: center
+}
+box{
+    text-align: center;
+    align-items: center;
+}
+
+h1.Website{
+    text-align: center;
+}
+
+form.pages{
+    text-align: center;
+    align-items: center;
+}
+div.gogo{
+    align-items: center;
+    text-align: center;
+}
+
+body{
+    background-image: url('/images/library.jpg');
+    background-size: cover;
+    height: 100vh; /* Set to 100% of the viewport height */
+    margin: 0; /* Remove default margin */
+    color:aliceblue;
+}
+
+body.myHorror {
+    background-image: url('/images/Unicorn.jpg');
+    background-size: cover;
+    height: 100vh; /* Set to 100% of the viewport height */
+    margin: 0; /* Remove default margin */
+    color: chartreuse;
+  }
+
+body.myFantasy{
+    background-image: url('/images/Rainbow.jpg');
+    background-size: cover;
+    height: 100vh; /* Set to 100% of the viewport height */
+    margin: 0; /* Remove default margin */
+}
+  
+body.myFiction{
+    background-image: url('/images/fiction.jpeg');
+    background-size: cover;
+    height: 100vh; /* Set to 100% of the viewport height */
+    margin: 0; /* Remove default margin */
+}
+  
+body.myNonFiction{
+    background-image: url('/images/Non-Fiction.jpg');
+    background-size: cover;
+    height: 100vh; /* Set to 100% of the viewport height */
+    margin: 0; /* Remove default margin */
+}
+
+body.mySciFi{
+    background-image: url('/images/Sci-Fi.jpg');
+    background-size: cover;
+    height: 100vh; /* Set to 100% of the viewport height */
+    margin: 0; /* Remove default margin */
+    color: beige;
+}
+  
+body.myAction{
+    background-image: url('/images/Action.jpg');
+    background-size: cover;
+    height: 100vh; /* Set to 100% of the viewport height */
+    margin: 0; /* Remove default margin */
+}
+
+a.Go{
+    color:gold
+}
+
+div.ZZZzzz{
+    align-items: center;
+    text-align: center;
+}
+
+textarea.summary{
+    border: 1px solid #ccc; /* Add a solid border to the input */
+    width: 250px; /* Make the input take up the full width of its container */
+    padding: 8px; /* Add padding for better appearance */
+    box-sizing: border-box; /* Include padding and border in the input's total width */
+    font-size: 16px; /* Adjust the font size */
+    height: 100px;
+}
+
+div.red{
+    color: red;
+}

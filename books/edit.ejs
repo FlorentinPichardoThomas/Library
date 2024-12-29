@@ -1,0 +1,45 @@
+<%- include('../partials/header') %>
+
+<div><a link href="/books/<%= book._id %>" class="Go">Go Back</a></div>
+<div class="gogo">
+<div id="2"><a><%= book.name %></a></div>
+<div>Author:<%= book.userName %></div>
+    <td><img src="/images/books/<%=book.coverImage%>"></td>
+<div>Price:$<%= book.price %></div>
+<div>ISBN:<%= book.ISBN %></div>
+<div>Published:<%= book.year %></div>
+<div>Genre:<%= book.genre.charAt(0).toUpperCase() + book.genre.slice(1) %></div>
+<div>Description: <%= book.description %></div>
+
+<form id="new-form" action="/books/<%= book._id %>/update"  method="post" enctype="multipart/form-data">
+    <label>Title:</label>
+    <input type="text" name="bookName">
+
+    <!-- <label>Image:</label>
+    <input type="file" accept="image/*" id="photo" name="photo"> -->
+    <label>Image:</label>
+    <input type='file' accept='image/*' name='bookCoverImage'>
+    <label>Release Year:</label>
+    <input type="text" name="year">
+
+<label>Price</label>
+<input type='text' name="price">
+
+    <label>ISBN:</label>
+    <input type="text" name="ISBN">
+
+    <label>Genre:</label>
+    <select id="genre" name="genre">
+        <option value="fantasy">Fantasy</option>
+        <option value="sci-fi">Sci-Fi</option>
+        <option value="horror">Horror</option>
+        <option value="action">Action</option>
+        <option value="non-fiction">Non-Fiction</option>
+        <option value="fiction">Fiction</option>
+    </select>
+<label>Description:</label>
+<textarea name="description" class="summary"></textarea>
+    <input type="submit" value="Update Book">
+</form>
+
+<%- include('../partials/footer') %>
